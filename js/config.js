@@ -22,8 +22,8 @@ const SITE = {
 
   // ── CONTATO ──────────────────────────────────────────────────
   contato: {
-    whatsapp:      "5534998864444",
-    whatsappLabel: "(34) 9 98864-6444",
+    whatsapp:      "553498864444",
+    whatsappLabel: "(34) 9 8864-6444",
     email:         "contato@moarabpo.com.br",
     instagram:     "@moara.bpofinanceiro",
     instagramUrl:  "https://instagram.com/moara.bpofinanceiro",
