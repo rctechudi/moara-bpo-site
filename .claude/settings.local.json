@@ -3,7 +3,10 @@
     "allow": [
       "Bash(mkdir -p \"c:/Users/ReginaldoPradoAnalis/OneDrive - RC Tech - Soluções Tecnológicas/Documentos/CLIENTES/MOARA BPO/SITE MOARA/moara-bpo/img\")",
       "Bash(cp \"c:/Users/ReginaldoPradoAnalis/OneDrive - RC Tech - Soluções Tecnológicas/Documentos/CLIENTES/MOARA BPO/SITE MOARA/moara-bpo/assets/logo.png\" \"c:/Users/ReginaldoPradoAnalis/OneDrive - RC Tech - Soluções Tecnológicas/Documentos/CLIENTES/MOARA BPO/SITE MOARA/moara-bpo/img/logo.png\")",
-      "Bash(cp \"c:/Users/ReginaldoPradoAnalis/OneDrive - RC Tech - Soluções Tecnológicas/Documentos/CLIENTES/MOARA BPO/SITE MOARA/moara-bpo/assets/cintia.jpg\" \"c:/Users/ReginaldoPradoAnalis/OneDrive - RC Tech - Soluções Tecnológicas/Documentos/CLIENTES/MOARA BPO/SITE MOARA/moara-bpo/img/cintia.jpg\")"
+      "Bash(cp \"c:/Users/ReginaldoPradoAnalis/OneDrive - RC Tech - Soluções Tecnológicas/Documentos/CLIENTES/MOARA BPO/SITE MOARA/moara-bpo/assets/cintia.jpg\" \"c:/Users/ReginaldoPradoAnalis/OneDrive - RC Tech - Soluções Tecnológicas/Documentos/CLIENTES/MOARA BPO/SITE MOARA/moara-bpo/img/cintia.jpg\")",
+      "PowerShell(Get-ChildItem -Path \"c:\\\\Users\\\\ReginaldoPradoAnalis\\\\OneDrive - RC Tech - Soluções Tecnológicas\\\\Documentos\\\\CLIENTES\\\\MOARA BPO\\\\SITE MOARA\\\\moara-bpo\" -Recurse | Where-Object { $_.PSIsContainer -eq $false } | Select-Object @{Name=\"RelativePath\"; Expression={$_.FullName -replace [regex]::Escape\\(\\(Get-Item \"c:\\\\Users\\\\ReginaldoPradoAnalis\\\\OneDrive - RC Tech - Soluções Tecnológicas\\\\Documentos\\\\CLIENTES\\\\MOARA BPO\\\\SITE MOARA\\\\moara-bpo\"\\).FullName\\), \"\" }} | Sort-Object RelativePath)",
+      "PowerShell(cd \"c:\\\\Users\\\\ReginaldoPradoAnalis\\\\OneDrive - RC Tech - Soluções Tecnológicas\\\\Documentos\\\\CLIENTES\\\\MOARA BPO\\\\SITE MOARA\\\\moara-bpo\"; Get-ChildItem -Recurse -File | Sort-Object FullName | ForEach-Object { $_.FullName })",
+      "WebSearch"
     ]
   }
 }

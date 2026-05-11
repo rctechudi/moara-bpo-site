@@ -223,7 +223,7 @@ img { max-width: 100%; height: auto; display: block; }
 
 .sobre-visual { position: sticky; top: 6rem; }
 .cintia-wrap { position: relative; border: 1px solid var(--borda); border-top: 2px solid var(--ouro); margin-bottom: 1.4rem; background: var(--preto3); overflow: hidden; }
-.cintia-foto { width: 100%; aspect-ratio: 3/4; object-fit: cover; object-position: top center; }
+.cintia-foto { width: 100%; aspect-ratio: 3/4; object-fit: cover; object-position: 50% 20%; }
 .cintia-placeholder { width: 100%; aspect-ratio: 3/4; display: flex; align-items: center; justify-content: center; }
 .cintia-placeholder span { font-family: var(--ft); font-size: 6rem; font-weight: 300; color: rgba(201,168,76,.2); }
 .cintia-nome { font-family: var(--ft); font-size: 1.8rem; font-weight: 400; color: var(--creme); }
@@ -353,7 +353,9 @@ footer {
 .footer-links { display: flex; gap: 1.2rem; flex-wrap: wrap; justify-content: center; }
 .footer-links a { font-size: .72rem; color: var(--txt-mudo); opacity: .6; transition: opacity .2s; }
 .footer-links a:hover { opacity: 1; }
-.footer-grupo { font-size: .72rem; color: var(--txt-mudo); opacity: .5; }
+.footer-dev { text-align: right; }
+.footer-dev-label { display: block; font-size: .63rem; letter-spacing: .14em; text-transform: uppercase; color: var(--txt-mudo); opacity: .5; margin-bottom: .2rem; }
+.footer-dev-name { display: block; font-size: .78rem; color: var(--ouro); font-weight: 500; letter-spacing: .03em; opacity: .75; }
 
 /* ── WHATSAPP FLOAT ──────────────────────────────────────────── */
 .whatsapp-float {
@@ -402,7 +404,8 @@ footer {
 
   /* Hero */
   .hero-body          { grid-template-columns: 1fr; min-height: auto; gap: 1rem; }
-  .hero-img-wrap      { order: -1; padding-bottom: .5rem; }
+  .hero-line          { display: none; }
+  .hero-img-wrap      { padding-top: .5rem; }
   .hero-cel           { width: 50%; max-width: 260px; margin: 0 auto; }
 
   /* Planos — empilha antes dos 900px */
@@ -493,7 +496,7 @@ footer {
   }
   .footer-logo  { order: 1; }
   .footer-mid   { order: 2; }
-  .footer-grupo { order: 3; }
+  .footer-dev   { order: 3; text-align: center; }
   .footer-links { gap: 1rem; }
   .footer-logo img { height: 24px; }
 

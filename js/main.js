@@ -81,12 +81,22 @@ document.addEventListener('DOMContentLoaded', () => {
   const el = document.getElementById('link-email');
   if (el) el.href = `mailto:${SITE.contato.email}`;
 
-  // Logo fallback
+  // Logo fallback — nav
   const logoImg = document.getElementById('nav-logo-img');
   if (logoImg) {
     logoImg.onerror = () => {
       logoImg.style.display = 'none';
       document.getElementById('nav-logo-fallback').style.display = 'block';
+    };
+  }
+
+  // Logo fallback — footer
+  const footerLogoImg = document.getElementById('footer-logo-img');
+  if (footerLogoImg) {
+    footerLogoImg.onerror = () => {
+      footerLogoImg.style.display = 'none';
+      const fn = document.getElementById('footer-nome');
+      if (fn) fn.style.display = 'inline';
     };
   }
 
