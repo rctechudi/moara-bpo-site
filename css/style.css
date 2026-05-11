@@ -189,6 +189,7 @@ img { max-width: 100%; height: auto; display: block; }
 .band-item { font-size: .88rem; color: var(--creme); }
 .band-item strong { color: #fff; font-weight: 500; }
 .band-sep { width: 1px; height: 18px; background: rgba(240,235,224,.3); }
+.band-fonte { width: 100%; font-size: .65rem; color: rgba(240,235,224,.38); text-align: center; margin-top: .5rem; letter-spacing: .04em; font-style: italic; }
 
 /* ── SOBRE ───────────────────────────────────────────────────── */
 #sobre { padding: var(--sec-pad); }
@@ -214,12 +215,12 @@ img { max-width: 100%; height: auto; display: block; }
   border-bottom: 1px solid var(--borda); padding-bottom: .5rem;
 }
 .essencia-item > div:last-child { font-size: .93rem; color: var(--txt-med); line-height: 1.75; }
-.valores-lista { list-style: none; display: flex; flex-wrap: wrap; gap: .45rem; margin-top: .1rem; }
+.valores-lista { list-style: none; display: grid; grid-template-columns: 1fr 1fr; gap: .55rem .8rem; margin-top: .3rem; }
 .valores-lista li {
-  font-size: .82rem; color: var(--txt-med);
-  border: 1px solid rgba(201,168,76,.25); padding: .22rem .75rem;
+  font-size: .88rem; color: var(--txt-med);
+  display: flex; align-items: center; gap: .6rem; line-height: 1.4;
 }
-.valores-lista li::before { display: none; }
+.valores-lista li::before { content: '—'; color: var(--ouro); font-size: .8rem; flex-shrink: 0; }
 
 .sobre-visual { position: sticky; top: 6rem; }
 .cintia-wrap { position: relative; border: 1px solid var(--borda); border-top: 2px solid var(--ouro); margin-bottom: 1.4rem; background: var(--preto3); overflow: hidden; }
@@ -466,6 +467,7 @@ footer {
   .cintia-quote   { font-size: 1rem; }
   .diferencial-card { padding: 1.1rem; gap: .9rem; }
   .essencia-item  { padding: 1.2rem 1rem; }
+  .valores-lista  { grid-template-columns: 1fr; }
 
   /* Planos */
   .planos-header  { margin-bottom: 2rem; }
